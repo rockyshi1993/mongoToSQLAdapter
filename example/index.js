@@ -153,7 +153,6 @@ const Mysql = require('./msyql');
     //         email: { $first: "$users.email" }
     //     }
     // })
-    // console.log(aggregatePaginate);
 
     // 聚合查询
     // const aggregate = db('users').aggregate
@@ -170,6 +169,9 @@ const Mysql = require('./msyql');
     //     .sort({ name: 1 })
     //     .limit(10)
     //     .toSQL();     // toArray 则返回执行结果
+
+
+
 
 
 
