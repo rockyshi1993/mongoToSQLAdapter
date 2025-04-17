@@ -129,30 +129,7 @@ const Mysql = require('./msyql');
     //     total:true
     // });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   // ---------------- 聚合查询转换暂未完成，请使用原生sql -----------------
-
-
-    // // 聚合查询
+    // 聚合查询
     // const aggregate = db('users').aggregate
     //     .project(['user_id', 'name'])
     //     .match({ login_date: { $gte: '2025-02-11 00:00:00', $lt: '2025-02-12 00:00:00' } })
@@ -193,6 +170,9 @@ const Mysql = require('./msyql');
     //     }
     // })
     // console.log(aggregatePaginate);
+
+    // ------------ 更复杂的聚合查询暂未适配，请用原生SQL -----------
+
 })();
 
 
