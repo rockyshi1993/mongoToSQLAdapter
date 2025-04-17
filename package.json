@@ -2,7 +2,7 @@
   "name": "mongotomysqladapter",
   "version": "1.0.0",
   "description": "mongo查询转sql适配器",
-  "main": "MongoQueryBuilder.js",
+  "main": "./lib/curd.js",
   "scripts": {
     "test": "test"
   },
