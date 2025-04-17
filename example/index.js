@@ -129,22 +129,6 @@ const Mysql = require('./msyql');
     //     total:true
     // });
 
-    // 聚合查询
-    // const aggregate = db('users').aggregate
-    //     .project(['user_id', 'name'])
-    //     .match({ login_date: { $gte: '2025-02-11 00:00:00', $lt: '2025-02-12 00:00:00' } })
-    //     .group({ _id: "$user_id" })
-    //     .subQuery(                     //子查询阶段
-    //         'user_order',   // 子查询表名 映射名称，不填写默认为 orders
-    //         db('orders').aggregate
-    //         .project(['user_id', 'name'])
-    //         .match({ user_id: { $eq: { $col: 'users.user_id' } } }) // 将 orders.user_id 与外层的 users.user_id 进行比较
-    //         .count('total')
-    //     )
-    //     .sort({ name: 1 })
-    //     .limit(10)
-    //     .toSQL();     // toArray 则返回执行结果
-
     // 聚合分页查询
     // const aggregatePaginate = await db('users').aggregatePaginate({
     //     query: { },
@@ -170,6 +154,34 @@ const Mysql = require('./msyql');
     //     }
     // })
     // console.log(aggregatePaginate);
+
+    // 聚合查询
+    // const aggregate = db('users').aggregate
+    //     .project(['user_id', 'name'])
+    //     .match({ login_date: { $gte: '2025-02-11 00:00:00', $lt: '2025-02-12 00:00:00' } })
+    //     .group({ _id: "$user_id" })
+    //     .subQuery(                     //子查询阶段
+    //         'user_order',   // 子查询表名 映射名称，不填写默认为 orders
+    //         db('orders').aggregate
+    //         .project(['user_id', 'name'])
+    //         .match({ user_id: { $eq: { $col: 'users.user_id' } } }) // 将 orders.user_id 与外层的 users.user_id 进行比较
+    //         .count('total')
+    //     )
+    //     .sort({ name: 1 })
+    //     .limit(10)
+    //     .toSQL();     // toArray 则返回执行结果
+
+
+
+
+
+
+
+
+
+
+
+
 
     // ------------ 更复杂的聚合查询暂未适配，请用原生SQL -----------
 
