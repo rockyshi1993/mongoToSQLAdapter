@@ -36,7 +36,7 @@ npm install mongotomysqladapter
 ```javascript
 const mongoToSQLAdapter = require('mongotomysqladapter');
 const Mysql = require('./mysql2');     // 参考 example 配置
-const db = (databaseName) => new mongoToSQLAdapter(Mysql, databaseName, true, false, true);
+const db = (tableName) => new mongoToSQLAdapter(Mysql, tableName, true, false, true);
 ```
 
 ## 插入数据
