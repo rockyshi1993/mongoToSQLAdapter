@@ -4,7 +4,7 @@ const Mysql = require('./msyql');
 
 (async () => {
 
-    const db = (databaseName)=>new Curd(Mysql, databaseName,true, false,true);
+    const db = (tableName)=>new Curd(Mysql, tableName,true, false,true);
 
     /**
      * 插入单条数据
